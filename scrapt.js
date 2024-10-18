@@ -73,3 +73,31 @@ const nav = document.querySelector(".nav"),
             allSection[i].classList.toggle("open");
         }
     }
+
+
+
+
+
+
+            // تحميل الرسوم المتحركة
+            const animation = lottie.loadAnimation({
+                container: document.getElementById('lottie-animation'), // العنصر الذي سيحتوي الرسوم المتحركة
+                renderer: 'svg', // نوع المحرك
+                loop: true, // تكرار الرسوم المتحركة
+                autoplay: true, // بدء التشغيل تلقائيًا
+                path: 'animation.json' // مسار ملف JSON (تأكد من وضع ملف JSON في نفس المجلد أو استخدام رابط صحيح)
+            });
+    
+            window.onload = function() {
+                const loaderWrapper = document.getElementById('loader-wrapper');
+                const content = document.getElementById('content');
+                
+                // إظهار اللودينغ لمدة 10 ثوانٍ
+                setTimeout(function() {
+                    loaderWrapper.style.opacity = '0'; // بدء تأثير التلاشي
+                    setTimeout(function() {
+                        loaderWrapper.style.display = 'none'; // إخفاء اللودينغ بعد التلاشي
+                        content.classList.remove('hidden'); // إظهار المحتوى
+                    }, 500); // تأخير قبل إخفاء اللودينغ
+                }, 10000); // 10000 مللي ثانية (10 ثوانٍ)
+            };
