@@ -85,7 +85,8 @@ const nav = document.querySelector(".nav"),
                 renderer: 'svg', // نوع المحرك
                 loop: true, // تكرار الرسوم المتحركة
                 autoplay: true, // بدء التشغيل تلقائيًا
-                path: 'animation.json' // مسار ملف JSON (تأكد من وضع ملف JSON في نفس المجلد أو استخدام رابط صحيح)
+                path: 'https://lottie.host/c0b9a338-5259-48d3-81ec-ff0fb081ba18/ntV6ztnN7g.json',
+
             });
     
             window.onload = function() {
