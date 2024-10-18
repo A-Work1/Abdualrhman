@@ -747,7 +747,7 @@ h3.my-profession{
     position: fixed;
     bottom: 5px;
     right: 75px;
-    z-index: 9999;
+    z-index: 99;
     transition: 0.4s;
 }
 .button-w:hover{
@@ -762,7 +762,7 @@ h3.my-profession{
     position: fixed;
     bottom: 5px;
     right: 20px;
-    z-index: 9999;
+    z-index: 99;
     transition: 0.4s;
 }
 .button-c:hover{
@@ -925,3 +925,79 @@ h3.my-profession{
     }
     }
   /**********************************************/
+#loader-wrapper {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.719); /* خلفية بيضاء لللودينغ */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: opacity 0.5s ease; /* تأثير الانتقال للشفافية */
+    opacity: 1; /* تعيين الشفافية للبداية */
+    position: absolute;
+    z-index: 999;
+    overflow: hidden; /* لمنع التمرير أثناء التحميل */
+
+}
+
+.loader {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center; /* محاذاة النص في المركز */
+}
+
+.hidden {
+    display: none;
+}
+
+/* تخصيص حجم الصورة */
+.lottie {
+    width: 500px; /* يمكنك تغيير الحجم هنا */
+    height: auto;
+}
+
+/* خط يتحرك من الزاوية اليمنى العلوية */
+.moving-line-top {
+    position: absolute;
+    top: 0; /* خط في الزاوية العلوية */
+    right: 100%; /* بدء الحركة من خارج يمين الشاشة */
+    width: 100%;
+    height: 4px; /* سمك الخط */
+    background: #f03753; /* لون الخط مع بعض الشفافية */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* ظل الخط */
+    animation: moveLineTop 10s linear infinite; /* حركة الخط */
+}
+
+/* خط يتحرك من الزاوية اليسرى السفلية */
+.moving-line-bottom {
+    position: absolute;
+    bottom: 0; /* خط في الزاوية السفلية */
+    left: 100%; /* بدء الحركة من خارج اليسار */
+    width: 100%;
+    height: 4px; /* سمك الخط */
+    background: #f03753; /* لون الخط مع بعض الشفافية */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* ظل الخط */
+    animation: moveLineBottom 10s linear infinite; /* حركة الخط */
+}
+
+@keyframes moveLineTop {
+    0% {
+        right: 100%; /* بداية الحركة خارج يمين الشاشة */
+    }
+    100% {
+        right: -100%; /* نهاية الحركة خارج يسار الشاشة */
+    }
+}
+
+@keyframes moveLineBottom {
+    0% {
+        left: 100%; /* بداية الحركة خارج يسار الشاشة */
+    }
+    100% {
+        left: -100%; /* نهاية الحركة خارج يمين الشاشة */
+    }
+}
