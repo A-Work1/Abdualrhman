@@ -100,5 +100,5 @@ const nav = document.querySelector(".nav"),
                         loaderWrapper.style.display = 'none'; // إخفاء اللودينغ بعد التلاشي
                         content.classList.remove('hidden'); // إظهار المحتوى
                     }, 500); // تأخير قبل إخفاء اللودينغ
-                }, 10000); // 10000 مللي ثانية (10 ثوانٍ)
+                }, 5000); // 10000 مللي ثانية (10 ثوانٍ)
             };
