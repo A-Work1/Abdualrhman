@@ -55,6 +55,11 @@
     height: 30px;
     width: 30px;
     border-radius: 50px;
+    CURSOR: pointer;
+    transition: transform 0.2s ease;
+}
+.style-switcher .colors span:active {
+    transform: scale(90);
 }
 .style-switcher .color-1{
     background: #ec1839;
