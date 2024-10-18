@@ -1001,3 +1001,14 @@ h3.my-profession{
         left: -100%; /* نهاية الحركة خارج يمين الشاشة */
     }
 }
+
+@media (max-width: 768px) {
+    .lottie {
+        width: 80vw; /* عرض أكبر بالنسبة للشاشات الصغيرة */
+    }
+
+    .moving-line-top,
+    .moving-line-bottom {
+        height: 2px; /* تقليل سمك الخط في الشاشات الصغيرة */
+    }
+}
